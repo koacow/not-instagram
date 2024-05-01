@@ -1,0 +1,27 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    height: 100vh;
+}
+
+.login-field{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-field > label{
+    margin-right: 10px;
+}
+
+#login-form > button{
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}

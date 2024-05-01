@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Login.css';
 
 const testEmail = 'admin@gmail.com';
 const testPassword = 'shibboleth';
@@ -18,23 +18,27 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setEmail('');
-        setPassword('');
+        if (email === testEmail && password === testPassword) {
+            window.location.href = './App';
+        } else {
+            alert('Invalid email or password');
+        }
     };
 
     return (
-        <div>
+        <div className='login'>
             <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
+            <form onSubmit={handleSubmit} id='login-form'>
+                <div className='login-field'>
                     <label>Email:</label>
                     <input type="email" value={email} onChange={handleEmailChange} />
                 </div>
-                <div>
+                <div className='login-field'>
                     <label>Password:</label>
                     <input type="password" value={password} onChange={handlePasswordChange} />
                 </div>
                 <button type="submit" onSubmit={handleSubmit}>Login</button>
+                <button onClick={() => window.location.href = '/signup'}>Sign Up</button>
             </form>
         </div>
     );
