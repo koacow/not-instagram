@@ -27,18 +27,20 @@ const Login = () => {
 
     return (
         <div className='login'>
-            <h2>Login</h2>
+            <h1>[Name Pending]</h1>
             <form onSubmit={handleSubmit} id='login-form'>
                 <div className='login-field'>
                     <label>Email:</label>
-                    <input type="email" value={email} onChange={handleEmailChange} />
+                    <input type="email" value={email} placeholder='example@provider.com' onChange={handleEmailChange} />
                 </div>
                 <div className='login-field'>
                     <label>Password:</label>
-                    <input type="password" value={password} onChange={handlePasswordChange} />
+                    <input type="password" value={password} placeholder='Password' onChange={handlePasswordChange} />
                 </div>
                 <button type="submit" onSubmit={handleSubmit}>Login</button>
-                <button onClick={() => window.location.href = '/signup'}>Sign Up</button>
+                <section id='sign-up-redirect'>
+                    <p>Don't have an account with us? <a href='./SignUp'>Sign Up</a></p>
+                </section>
             </form>
         </div>
     );

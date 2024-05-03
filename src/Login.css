@@ -7,8 +7,14 @@
 }
 
 .login-field{
-    margin: 10px;
-    padding: 10px;
+    margin: 0.6rem 0;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-field > input{
+    padding: 0.3rem;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
@@ -18,10 +24,18 @@
 }
 
 #login-form > button{
-    margin-left: 10px;
-    padding: 10px;
+    width: 100%;
+    padding: 0.6rem;
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #f0f0f0;
     cursor: pointer;
+}
+
+#sign-up-redirect{
+    margin: 0.6rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
 }
