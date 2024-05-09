@@ -9,6 +9,7 @@ export default function Header() {
                 <input type="text" placeholder="Search..." />
                 <button type="submit">Search</button>
             </form>
+            <p>Time spent on app today: [Time]</p>
         </div>
     );
 }
