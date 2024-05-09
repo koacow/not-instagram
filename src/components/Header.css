@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem;
+}
+
+#search-bar{
+    margin-left: auto;
+}
+
+#search-bar > input{
+    padding: 0.5rem;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+
+#search-bar > button{
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}

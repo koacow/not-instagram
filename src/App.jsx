@@ -1,13 +1,14 @@
 import './App.css';
 import React, { useState } from 'react';
-import Header from './components/Header';
+import Home from './Home';
+import Login from './Login';
 
-function App() {
+export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <>
+      {isLoggedIn ? <Home /> : <Login setIsLoggedIn={setIsLoggedIn} />}
+    </>
   );
 }
-
-export default App;

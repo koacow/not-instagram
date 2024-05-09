@@ -4,7 +4,7 @@ import './Login.css';
 const testEmail = 'admin@gmail.com';
 const testPassword = 'shibboleth';
 
-const Login = () => {
+const Login = ({ setIsLoggedIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -19,7 +19,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email === testEmail && password === testPassword) {
-            window.location.href = './App';
+            setIsLoggedIn(true);
         } else {
             alert('Invalid email or password');
         }

@@ -2,14 +2,22 @@ import React, { useState } from 'react';
 import './Header.css';
 
 export default function Header() {
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearchChange = ({target}) => {
+        setSearchQuery(target.value);
+    }
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+    }
     return (
         <div className='header'>
-            <p>[Logo goes here]</p>
-            <form action="#">
-                <input type="text" placeholder="Search..." />
-                <button type="submit">Search</button>
+            <p id='logo'>[Logo goes here]</p>
+            <form action="#" id='search-bar'>
+                <input type="text" placeholder="Search..." onChange={handleSearchChange}/>
+                <button type="submit" onSubmit={handleSearchSubmit}>Search</button>
             </form>
-            <p>Time spent on app today: [Time]</p>
+            <p id='time-tracker'>Time spent on app today: 1h 20mins</p>
         </div>
     );
 }
