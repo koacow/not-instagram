@@ -1,0 +1,41 @@
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    height: 100vh;
+}
+
+.sign-up-field{
+    margin: 0.6rem 0;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.sign-up-field > input{
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.sign-up-field > label{
+    margin-right: 10px;
+}
+
+#sign-up-form > button{
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#login-redirect{
+    margin: 0.6rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+}

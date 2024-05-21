@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link, Navigate } from 'react-router-dom';
 import './Login.css';
+import SignUp from '../sign-up/SignUp';
 
 const testEmail = 'admin@gmail.com';
 const testPassword = 'shibboleth';
 
-const Login = ({ setIsLoggedIn }) => {
+const Login = ({ isLoggedIn, setIsLoggedIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -25,6 +27,10 @@ const Login = ({ setIsLoggedIn }) => {
         }
     };
 
+    if (isLoggedIn){
+        return <Navigate to='/' />;
+    }
+
     return (
         <div className='login'>
             <h1>[Name Pending]</h1>
@@ -39,7 +45,7 @@ const Login = ({ setIsLoggedIn }) => {
                 </div>
                 <button type="submit" onSubmit={handleSubmit}>Login</button>
                 <section id='sign-up-redirect'>
-                    <p>Don't have an account with us? <a href='./SignUp'>Sign Up</a></p>
+                    <p>Don't have an account with us? <Link to={'/sign-up'}>Sign Up</Link></p>
                 </section>
             </form>
         </div>
