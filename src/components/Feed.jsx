@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import {posts} from '../mock-backend/sample-posts'
+import { Link } from 'react-router-dom'
+import {ROUTES} from '../app/routes'
 import './Feed.css'
 
 export default function Feed (){
@@ -13,7 +15,7 @@ export default function Feed (){
         <div className='feed'>
             {feed.map(post => (
                 <div key={post.id} className='post'>
-                    <h2 className='post-user'>{post.user}</h2>
+                    <Link to={ROUTES.TO_PROFILE(post.username)}><h2 className='post-username'>{post.username}</h2></Link>
                     <p className='post-content'>{post.content}</p>
                     <section className='post-statistics'>
                         <p>Likes: {post.likes}</p>

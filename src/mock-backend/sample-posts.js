@@ -1,7 +1,7 @@
 const posts = [
     {
         id: 1,
-        user: "JohnDoe",
+        username: "JohnDoe",
         content: "Just had an amazing vacation in Hawaii! 🌴🌺 #vacation #hawaii",
         likes: 100,
         comments: [
@@ -17,7 +17,7 @@ const posts = [
     },
     {
         id: 2,
-        user: "EmilyJones",
+        username: "EmilyJones",
         content: "Excited to announce the launch of my new website! Check it out: www.emilyjones.com",
         likes: 50,
         comments: [
@@ -33,7 +33,7 @@ const posts = [
     },
     {
         id: 3,
-        user: "AlexSmith",
+        username: "AlexSmith",
         content: "Happy birthday to my best friend! 🎉🎂 #birthday #celebration",
         likes: 200,
         comments: [

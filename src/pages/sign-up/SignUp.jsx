@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
+import { ROUTES } from '../../app/routes';
 import './SignUp.css';
 
 const SignUp = ({ isLoggedIn, setIsLoggedIn }) => {
@@ -39,7 +40,7 @@ const SignUp = ({ isLoggedIn, setIsLoggedIn }) => {
     };
 
     if (isLoggedIn){
-        return <Navigate to='/' />;
+        return <Navigate to={ROUTES.HOME} />;
     }
 
     return (
@@ -68,7 +69,7 @@ const SignUp = ({ isLoggedIn, setIsLoggedIn }) => {
                 </div>
                 <button type="submit" onSubmit={handleSubmit}>Create account</button>
                 <section id='login-redirect'>
-                    <p>Already have an account with us? <Link to='/login'>Login</Link></p>
+                    <p>Already have an account with us? <Link to={ROUTES.LOGIN}>Login</Link></p>
                 </section>
             </form>
         </div>
